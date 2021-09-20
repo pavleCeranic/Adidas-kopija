@@ -1,0 +1,28 @@
+.needhelp-container {
+  margin: 15px;
+  letter-spacing: 0.4px;
+}
+.title {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 10px 0;
+}
+.items {
+  display: flex;
+  flex-direction: column;
+  font-size: 17px;
+  text-decoration: underline;
+  color: rgb(66, 66, 66);
+}
+.items * {
+  margin: 8px 0;
+  transition: background-color ease-in 0.25s;
+  background-color: white;
+}
+.items *:hover {
+  background-color: black;
+  color: rgb(179, 179, 179);
+  text-decoration: underline rgb(179, 179, 179);
+  transition: background-color ease-in 0.25s;
+}
