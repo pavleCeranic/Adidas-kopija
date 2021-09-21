@@ -56,7 +56,9 @@ export const NavBar = (props) => {
           </div>
 
           <div className={style["logo"]}>
-            <img src={og} alt="kok" className={style["image"]}></img>
+            <Link to="/">
+              <img src={og} alt="kok" className={style["image"]}></img>
+            </Link>
           </div>
           {/* <div className={style["logo"]}>dd</div> */}
           <MainContent
