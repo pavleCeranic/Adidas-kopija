@@ -96,6 +96,7 @@
 }
 .input-and-icons {
   align-items: center;
+  justify-content: center;
   order: 4;
 }
 .search-form {
@@ -133,6 +134,10 @@
 }
 .favourites {
   display: flex;
+  color: #000000;
+}
+.icons {
+  color: #000000;
 }
 @media screen and (max-width: 55em) {
   .navmenu * {
@@ -180,6 +185,7 @@
 
   .searchIcon {
     display: flex;
+    width: 20px;
   }
   .favourites {
     display: none;
