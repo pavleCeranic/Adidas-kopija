@@ -12,6 +12,7 @@
   position: absolute;
   flex-grow: 0.5;
   min-width: 315px;
+  z-index: 1;
 }
 
 .header {
