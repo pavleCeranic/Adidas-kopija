@@ -1,0 +1,21 @@
+.wishlist-container {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+.title {
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 700;
+  padding: 10px 0;
+}
+.emptyWishlist {
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+.items {
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 10px 0;
+  color: rgb(92, 92, 92);
+}
