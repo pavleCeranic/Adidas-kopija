@@ -16,6 +16,7 @@ import {
   faShoppingCart,
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 export const NavBar = (props) => {
   const dispatch = useDispatch();
@@ -32,7 +33,7 @@ export const NavBar = (props) => {
   };
 
   return (
-    <Router>
+    <>
       <div className={style["navbar"]}>
         <div className={style.navmenu}>
           <div>FREE DELIVERY FOR CREATORS club members</div>
@@ -48,7 +49,9 @@ export const NavBar = (props) => {
               <span></span>
             </div>
             <div className={style["heart-left"]}>
-              <FontAwesomeIcon icon={faHeart} />
+              <Link to="/wishlist">
+                <FontAwesomeIcon className={style["icons"]} icon={faHeart} />
+              </Link>
             </div>
           </div>
 
@@ -66,9 +69,18 @@ export const NavBar = (props) => {
               placeholder="Search"
               type="text"
             />
-            <FontAwesomeIcon icon={faUser} />
-            <FontAwesomeIcon className={style["favourites"]} icon={faHeart} />
-            <FontAwesomeIcon icon={faShoppingCart} />
+            <Link to="/useraccount">
+              <FontAwesomeIcon className={style["icons"]} icon={faUser} />
+            </Link>
+            <Link to="/wishlist">
+              <FontAwesomeIcon className={style["favourites"]} icon={faHeart} />
+            </Link>
+            <Link to="/shoppingcart">
+              <FontAwesomeIcon
+                className={style["icons"]}
+                icon={faShoppingCart}
+              />
+            </Link>
             <FontAwesomeIcon
               onClick={clickSearchHandler}
               className={style["searchIcon"]}
@@ -79,6 +91,6 @@ export const NavBar = (props) => {
       </div>
       {sidebarState && <SideBar />}
       {searchState && <SearchTab />}
-    </Router>
+    </>
   );
 };
