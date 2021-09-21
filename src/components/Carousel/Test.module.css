@@ -1,0 +1,8 @@
+.carousel-item {
+  display: flex;
+  flex-direction: row;
+}
+.carousel-item * {
+  width: 16%;
+  padding: 15px;
+}

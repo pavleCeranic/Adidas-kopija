@@ -10,6 +10,7 @@ import Home from './Pages/Home';
 import Wishlist from './Pages/Wishlist';
 import UserAccount from './Pages/UserAccount';
 import ShoppingCart from './Pages/ShoppingCart';
+import Test from './Test'
 
 
 ReactDOM.render(
@@ -23,6 +24,7 @@ ReactDOM.render(
           <Route path="/wishlist"  component={Wishlist} />
           <Route path="/useraccount"   component={UserAccount} />
           <Route path="/shoppingcart"  component={ShoppingCart} />
+          <Route path="/test"  component={Test} />
         </Switch>
         <Footer />
       </BrowserRouter>

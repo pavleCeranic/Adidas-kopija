@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./styles/NavBarFile.module.css";
-import { BrowserRouter as Router } from "react-router-dom";
+//import { BrowserRouter as Router } from "react-router-dom";
 import { MainContent } from "./MainContent";
 import { NavTrack } from "./NavTrack";
 import { SideBar } from "./SideBar";
@@ -74,8 +74,8 @@ export const NavBar = (props) => {
             <Link to="/useraccount">
               <FontAwesomeIcon className={style["icons"]} icon={faUser} />
             </Link>
-            <Link to="/wishlist">
-              <FontAwesomeIcon className={style["favourites"]} icon={faHeart} />
+            <Link className={style["favourites"]} to="/wishlist">
+              <FontAwesomeIcon icon={faHeart} />
             </Link>
             <Link to="/shoppingcart">
               <FontAwesomeIcon
@@ -84,8 +84,8 @@ export const NavBar = (props) => {
               />
             </Link>
             <FontAwesomeIcon
-              onClick={clickSearchHandler}
               className={style["searchIcon"]}
+              onClick={clickSearchHandler}
               icon={faSearch}
             />
           </div>

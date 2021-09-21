@@ -1,4 +1,5 @@
 .navbar {
+  color: #000;
   height: 110px;
   background-color: rgb(255, 255, 255);
   display: flex;
@@ -55,6 +56,7 @@
 .all-categories * {
   margin: 0 8px;
   display: flex;
+  cursor: pointer;
 }
 
 .main-categories :hover {
@@ -71,8 +73,13 @@
 }
 
 .category {
+  color: #000;
   opacity: 0.7;
   font-weight: 100;
+  text-decoration: none;
+}
+.category:hover {
+  color: #000;
 }
 .item-placeholder {
   align-items: center;
@@ -96,7 +103,6 @@
 }
 .input-and-icons {
   align-items: center;
-  justify-content: center;
   order: 4;
 }
 .search-form {
@@ -132,12 +138,13 @@
   display: none;
   cursor: pointer;
 }
-.favourites {
+.favourites * {
   display: flex;
   color: #000000;
 }
 .icons {
   color: #000000;
+  margin: 0;
 }
 @media screen and (max-width: 55em) {
   .navmenu * {
@@ -182,10 +189,8 @@
   .search-form {
     display: none;
   }
-
   .searchIcon {
     display: flex;
-    width: 20px;
   }
   .favourites {
     display: none;
