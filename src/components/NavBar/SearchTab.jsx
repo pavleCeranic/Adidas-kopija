@@ -3,13 +3,13 @@ import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { toggleSearchAction } from "../../Store/SearchSlice";
 import style from "./styles/SearchTab.module.css";
+import { debounce } from "lodash";
 
 const SearchTab = () => {
   const dispatch = useDispatch();
 
   const searchState = useSelector((state) => state.search.show);
-  console.log("kako e", searchState);
-
+  const tab = searchState ? "search-tab" : "search-tab-opposite-animation";
   const clickSearchHandler = () => {
     dispatch(toggleSearchAction.toggleSearch());
   };
@@ -17,7 +17,7 @@ const SearchTab = () => {
   return (
     <Fragment>
       {searchState ? (
-        <div className={style["search-tab"]}>
+        <div className={style[tab]}>
           <div className={style["search-container"]}>
             <div onClick={clickSearchHandler} className={style["exit"]}>
               X

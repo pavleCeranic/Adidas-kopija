@@ -4,6 +4,7 @@ import { NavTrack } from "./NavTrack";
 import style from "./styles/SideBar.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleShowAction } from "../../Store/SidebarSlice";
+import { debounce } from "lodash";
 
 export const SideBar = (props) => {
   const dispatch = useDispatch();

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import style from "./styles/NavBarFile.module.css";
 //import { BrowserRouter as Router } from "react-router-dom";
 import { MainContent } from "./MainContent";
@@ -17,20 +17,33 @@ import {
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { debounce } from "lodash";
 
 export const NavBar = (props) => {
   const dispatch = useDispatch();
   const sidebarState = useSelector((state) => state.show.show);
   const searchState = useSelector((state) => state.search.show);
-
-  console.log("kako e", searchState);
-
+  const [item, setItem] = useState("");
+  const array = [
+    "FREE DELIVERY FOR CREATORS club members",
+    "60 DAYS* FREE RETURNS & EXCHANGE",
+    "COVID-19 FAQS & STORES OPEN",
+  ];
   const clickHandler = () => {
     dispatch(toggleShowAction.toggleSideabar());
   };
   const clickSearchHandler = () => {
     dispatch(toggleSearchAction.toggleSearch());
   };
+
+  useEffect(() => {
+    var count = 0;
+    setInterval((e) => {
+      var randomNumber = Math.floor(Math.random() * 11);
+      count = (count + randomNumber) % array.length;
+      setItem(array[count]);
+    }, 3000);
+  }, []);
 
   return (
     <>
@@ -39,6 +52,7 @@ export const NavBar = (props) => {
           <div>FREE DELIVERY FOR CREATORS club members</div>
           <div>60 DAYS* FREE RETURNS & EXCHANGE</div>
           <div>COVID-19 FAQS & STORES OPEN</div>
+          <div className={style["small-width-navmenu"]}>{item}</div>
         </div>
         <NavTrack navTrackClass={style["nav-track"]} ida={"track-item"} />
         <div className={style["all-categories"]}>

@@ -21,16 +21,20 @@
   letter-spacing: 2px;
   font-weight: 900;
   text-transform: uppercase;
-
-  transition: opacity ease-in 0.2s;
 }
 .navmenu * {
   cursor: pointer;
+  opacity: 1;
+  transition: opacity ease 0.5s;
 }
+.small-width-navmenu {
+  display: none;
+  animation: navmenuAnimation 3s infinite;
+}
+
 .navmenu :hover {
   text-decoration: underline;
   text-decoration-color: white;
-  /* background-image: url("../../../adidas.img"); */
 }
 .left-side-navbar {
   align-items: center;
@@ -148,7 +152,13 @@
 }
 @media screen and (max-width: 55em) {
   .navmenu * {
+    display: none;
     opacity: 0;
+    transition: opacity ease 0.5s;
+  }
+  .small-width-navmenu {
+    opacity: 1;
+    display: flex;
   }
   .navmenu {
     height: 45px;
@@ -203,26 +213,20 @@
     border-bottom: none;
   }
 }
-.sidebar {
-  overflow: hidden;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  background-color: rgb(236, 110, 110);
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  position: fixed;
-  flex-grow: 0.5;
-  transition: right ease 1s;
-}
-.sidebar-closed {
-  right: 51vw;
-}
+
 .image {
   height: 60px;
   width: 65px;
+}
+
+@keyframes navmenuAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
