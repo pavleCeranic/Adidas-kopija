@@ -199,6 +199,9 @@
     order: 2;
     overflow-x: hidden;
   }
+  .navbar {
+    border-bottom: none;
+  }
 }
 .sidebar {
   overflow: hidden;

@@ -5,7 +5,7 @@ import NeedHelp from "../components/Need Help/NeedHelp";
 const Wishlist = () => {
   const wishCount = 0;
   return (
-    <div>
+    <div className={style["wish-page"]}>
       <div className={style["wishlist-container"]}>
         <div className={style["title"]}>my wishlist</div>
         <div className={style["items"]}>{wishCount} items</div>

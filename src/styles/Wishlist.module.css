@@ -1,7 +1,13 @@
+.wish-page {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 .wishlist-container {
   display: flex;
   flex-direction: column;
-  padding: 15px;
+  padding: 15px 60px 0;
 }
 .title {
   text-transform: uppercase;
@@ -18,4 +24,17 @@
   font-size: 16px;
   padding: 10px 0;
   color: rgb(92, 92, 92);
+}
+@media screen and (max-width: 72em) {
+  .wish-page {
+    flex-direction: column;
+  }
+  .wishlist-container {
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 55em) {
+  .wish-page {
+    padding-top: 70px;
+  }
 }
