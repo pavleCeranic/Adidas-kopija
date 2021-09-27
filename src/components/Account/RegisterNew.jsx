@@ -1,6 +1,11 @@
 import React from "react";
-import style from ".Account.module.css";
+import style from "../../styles/UserAccount.module.css";
 
-export const RegisterNew = () => {
-  return <div></div>;
+const RegisterNew = () => {
+  return (
+    <div>
+      <div>dobro nam dosli</div>
+    </div>
+  );
 };
+export default RegisterNew;

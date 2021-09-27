@@ -1,17 +1,21 @@
-import React from "react";
-import style from ".Account.module.css";
+import style from "../../styles/UserAccount.module.css";
+import Button from "../UniversalStuff/Button";
 
-export const SigningIn = () => {
+const SigningIn = (props) => {
+  const buttonText = "SIGN IN";
   return (
     <div className={style["signingIn-container"]}>
-      <div className={style["logIn"]}>
-        <div className={style["title"]}></div>
-        <div className={style["form"]}></div>
+      <div className={style["signIn"]}>
+        <div className={style["title"]}>Sign in </div>
+        <div className={style["form"]}>
+          <input type="text" placeholder="Email *" />
+
+          <input type="text" placeholder="Password *" />
+        </div>
+        <Button koko={"SIGN IN"} />
         <div className={style["logIn-different-way"]}></div>
-      </div>
-      <div className={style["joinTheClub"]}>
-        <div className={style["title"]}></div>
       </div>
     </div>
   );
 };
+export default SigningIn;

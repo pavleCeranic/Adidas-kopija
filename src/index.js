@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { Provider } from 'react-redux';
-import store from './Store/store';
+import store from './Store/index';
 import { NavBar} from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
 import { BrowserRouter,Route, Switch } from "react-router-dom";
