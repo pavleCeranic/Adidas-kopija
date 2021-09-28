@@ -1,5 +1,5 @@
 .back-to-top-wrapper {
-  display: flex;
+  display: none;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -15,4 +15,9 @@
 }
 .text {
   font-weight: 600;
+}
+@media screen and (max-width: 72em) {
+  .back-to-top-wrapper {
+    display: flex;
+  }
 }

@@ -1,5 +1,5 @@
 .feedback-wrapper {
-  display: flex;
+  display: none;
   flex-direction: column;
   height: 100px;
   background-color: rgb(219, 219, 219);
@@ -14,4 +14,9 @@
 .text {
   font-size: 15px;
   letter-spacing: 0.5px;
+}
+@media screen and (max-width: 72em) {
+  .feedback-wrapper {
+    display: flex;
+  }
 }
