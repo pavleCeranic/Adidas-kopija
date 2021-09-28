@@ -13,11 +13,10 @@ import og from "./ogTike.jpg";
 import {
   faUser,
   faHeart,
-  faShoppingCart,
+  faShoppingBag,
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import { debounce } from "lodash";
 
 export const NavBar = (props) => {
   const dispatch = useDispatch();
@@ -94,7 +93,7 @@ export const NavBar = (props) => {
             <Link to="/shoppingcart">
               <FontAwesomeIcon
                 className={style["icons"]}
-                icon={faShoppingCart}
+                icon={faShoppingBag}
               />
             </Link>
             <FontAwesomeIcon

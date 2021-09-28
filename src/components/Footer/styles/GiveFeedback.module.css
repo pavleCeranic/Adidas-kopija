@@ -1,0 +1,17 @@
+.feedback-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  background-color: rgb(219, 219, 219);
+  padding: 20px;
+  margin: 20px 0 0;
+}
+.title {
+  font-size: 17px;
+  font-weight: 700;
+  padding: 0 0 20px 0;
+}
+.text {
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}

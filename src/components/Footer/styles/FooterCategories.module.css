@@ -1,0 +1,35 @@
+.footer-categories-wrappper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: space-around;
+  height: 300px;
+  margin: 30px;
+}
+.categories {
+  margin: 0 0 10px;
+}
+.categories * {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.title {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0 0 15px;
+}
+.list-item * {
+  font-size: 12px;
+  text-decoration: none;
+  color: rgb(77, 77, 77);
+  padding: 5px 0;
+}
+#8 {
+  background-color: #000;
+}
+@media screen and (max-width: 72em) {
+  .footer-categories-wrappper {
+    display: none;
+  }
+}

@@ -1,38 +1,23 @@
 import React from "react";
-import style from "./Footer.module.css";
+import BackToTop from "./BackToTop";
+import GiveFeedback from "./GiveFeedback";
+import BottomPart from "./BottomPart";
+import style from "./styles/Footer.module.css";
+import GetSaleOnMembership from "./GetSaleOnMembership";
+import LogInandCartInFooter from "./LogInandCartInFooter";
+import FooterAdition from "./FooterAdition";
+import FooterCategories from "./FooterCategories";
 
 const Footer = () => {
   return (
-    <div className={style["footer"]}>
-      <div className={style["region"]}>
-        <div>Region</div>
-        <div className={style["language"]}>Language </div>
-      </div>
-
-      <div className={style["bottom-links"]}>
-        <div className={style["sector"]}>
-          <div>
-            <a href="#somelink">Data settings</a>
-          </div>
-          <div>
-            <a href="#somelink">Privacy Centre</a>
-          </div>
-          <div>
-            <a href="#somelink">Cookies</a>
-          </div>
-        </div>
-        <div className={style["sector"]}>
-          <div>
-            <a href="#somelink">Cookie Directory</a>
-          </div>
-          <div>
-            <a href="#somelink">Privacy Notice</a>
-          </div>
-          <div>
-            <a href="#somelink">Terms and Conditions</a>
-          </div>
-        </div>
-      </div>
+    <div>
+      <GiveFeedback />
+      <BackToTop />
+      <LogInandCartInFooter />
+      <GetSaleOnMembership />
+      <FooterCategories />
+      <FooterAdition />
+      <BottomPart />
     </div>
   );
 };

@@ -1,0 +1,16 @@
+.sale-on-membership-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 155px;
+  background-color: rgb(230, 230, 15);
+}
+.sale-on-membership-wrapper * {
+  margin: 0 20px;
+}
+.sale-on-membership-text {
+  font-size: 28px;
+  font-weight: 700;
+}

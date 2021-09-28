@@ -1,0 +1,31 @@
+.LogInandCartInFooter-wrapper {
+  display: none;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: 600;
+  height: 60px;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+}
+.LogInandCartInFooter-wrapper * {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+.first-element * {
+  padding: 0 5px;
+}
+.second-element * {
+  padding: 0 5px;
+}
+.icons {
+  color: #fff;
+}
+.text {
+}
+@media screen and (max-width: 72em) {
+  .LogInandCartInFooter-wrapper {
+    display: flex;
+  }
+}

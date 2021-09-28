@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import style from "./UniversalStuff.module.css";
+import style from "./styles/UniversalStuff.module.css";
 import { clickButtonAction } from "../../Store/button-slice";
 
 const Button = (props) => {
