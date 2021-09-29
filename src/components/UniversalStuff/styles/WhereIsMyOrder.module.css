@@ -1,0 +1,13 @@
+.wrapper {
+  margin: 20px;
+}
+.title {
+  font-size: 15px;
+  font-weight: 600;
+}
+.text {
+  font-size: 15px;
+  color: rgb(95, 95, 95);
+  letter-spacing: 1px;
+  padding: 10px 0 35px;
+}

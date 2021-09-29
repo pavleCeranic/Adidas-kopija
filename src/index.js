@@ -11,6 +11,7 @@ import Wishlist from './Pages/Wishlist';
 import UserAccount from './Pages/UserAccount';
 import ShoppingCart from './Pages/ShoppingCart';
 import Test from './Test'
+import Help from './Pages/Help';
 
 
 ReactDOM.render(
@@ -25,6 +26,7 @@ ReactDOM.render(
           <Route path="/useraccount"   component={UserAccount} />
           <Route path="/shoppingcart"  component={ShoppingCart} />
           <Route path="/test"  component={Test} />
+          <Route path="/help"  component={Help} />
         </Switch>
         <Footer />
       </BrowserRouter>

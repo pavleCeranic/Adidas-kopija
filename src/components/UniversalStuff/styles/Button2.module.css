@@ -1,0 +1,38 @@
+.button-wrapper {
+  display: flex;
+  margin: 10px 0;
+}
+.button {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 13px 20px;
+  border: solid #000 1px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  transition: color ease-in 0.1s;
+  transition: transform ease-in 0.1s;
+}
+.button * {
+  margin: 0 10px;
+}
+.button:hover {
+  color: rgb(187, 187, 187);
+  transition: color ease-in 0.1s;
+}
+.button-clicked {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 13px 20px;
+  border: solid #000 1px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  transition: color ease-in 0.1s;
+  transform: scale(0.9);
+  transition: transform ease-in 0.1s;
+}

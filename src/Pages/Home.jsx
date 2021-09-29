@@ -1,11 +1,14 @@
 import React from "react";
 import style from "../styles/Home.module.css";
-import CardList from "../components/card/CardList";
+
+import AdidasStories from "../components/UniversalStuff/AdidasStories";
+import PopularRN from "../components/UniversalStuff/PopularRN";
 
 const Home = () => {
   return (
     <div className={style["home"]}>
-      <CardList />
+      <PopularRN />
+      <AdidasStories />
     </div>
   );
 };
