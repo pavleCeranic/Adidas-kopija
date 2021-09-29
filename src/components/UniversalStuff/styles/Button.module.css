@@ -1,0 +1,52 @@
+.button-wrapper {
+  display: flex;
+  margin: 20px 0;
+}
+.outline {
+  padding: 8px 5px 10px -5px;
+  border: #000 solid 1px;
+}
+.outline * {
+  padding: 0 15px;
+}
+.butt {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: -3px 3px 3px -3px;
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #fff;
+  background-color: #000;
+  transition: margin ease-in 0.1s;
+  transition: color ease-in 0.2s;
+  cursor: pointer;
+}
+.Butt {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #fff;
+  background-color: #000;
+  transition: margin ease-in 0.1s;
+  transition: color ease-in 0.2s;
+  cursor: pointer;
+}
+.butt:hover {
+  color: rgb(155, 155, 155);
+  transition: color ease-in 0.2s;
+}
+
+.Butt:hover {
+  color: rgb(155, 155, 155);
+  transition: color ease-in 0.2s;
+}
+@media screen and (max-width: 55em) {
+  .outline {
+    width: 100%;
+  }
+  .butt {
+  }
+}

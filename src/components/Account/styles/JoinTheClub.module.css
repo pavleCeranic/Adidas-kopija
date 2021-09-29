@@ -1,0 +1,26 @@
+.JoinTheClub-wrapper {
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin: 20px 20px;
+}
+ul {
+  padding: 12px 25px;
+  list-style-image: url(https://img.icons8.com/external-becris-lineal-becris/17/000000/external-check-mintab-for-ios-becris-lineal-becris-1.png);
+}
+li {
+  padding: 0px 0 20px;
+}
+.title {
+  margin: 0px 0 30px;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+@media screen and (max-width: 72em) {
+  .title {
+    font-size: 32px;
+  }
+  ul {
+    padding-bottom: 0px;
+  }
+}

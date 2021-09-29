@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { MainContent } from "./MainContent";
 import { NavTrack } from "./NavTrack";
 import style from "./styles/SideBar.module.css";
@@ -13,6 +13,7 @@ export const SideBar = (props) => {
   const clickHandler = () => {
     dispatch(toggleShowAction.toggleSideabar());
   };
+
   return (
     <Fragment>
       {sidebar ? (

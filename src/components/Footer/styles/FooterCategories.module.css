@@ -27,6 +27,9 @@
 }
 #8 {
 }
+.list-item *:hover {
+  text-decoration: underline;
+}
 @media screen and (max-width: 72em) {
   .footer-categories-wrappper {
     display: none;

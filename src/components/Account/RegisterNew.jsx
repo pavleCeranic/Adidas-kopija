@@ -1,5 +1,5 @@
 import React from "react";
-import style from "../../styles/UserAccount.module.css";
+import style from "./styles/RegisterNew.module.css";
 
 const RegisterNew = () => {
   return (

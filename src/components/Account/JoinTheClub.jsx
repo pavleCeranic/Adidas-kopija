@@ -1,6 +1,6 @@
 import Button from "../UniversalStuff/Button";
 import React from "react";
-import style from "./Account.module.css";
+import style from "./styles/JoinTheClub.module.css";
 
 const JoinTheClub = () => {
   return (

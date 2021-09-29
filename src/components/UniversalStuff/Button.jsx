@@ -1,32 +1,27 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
-import style from "./styles/UniversalStuff.module.css";
-import { clickButtonAction } from "../../Store/button-slice";
+import style from "./styles/Button.module.css";
 
 const Button = (props) => {
   const { koko } = props;
-  const dispatch = useDispatch();
-  const buttonClick = useSelector((state) => state.button.button);
+  const [state, setState] = useState(true);
 
-  const buttocks = buttonClick ? "butt" : "Butt";
+  const buttocks = state ? "butt" : "Butt";
 
   const clickHandler = (props) => {
-    dispatch(clickButtonAction.clickButton());
-    const timer = setTimeout(
-      () => dispatch(clickButtonAction.clickButton()),
-      100
-    );
+    setState((state) => !state);
+    const timer = setTimeout(() => setState((state) => !state), 100);
     return () => clearTimeout(timer);
   };
 
   return (
-    <span onClick={clickHandler}>
-      <div className={style["outline"]}></div>
-      <button onClick={clickHandler} className={style[buttocks]}>
-        {koko}
-      </button>
-    </span>
+    <div className={style["button-wrapper"]}>
+      <span className={style["outline"]}>
+        <span onClick={clickHandler} className={style[buttocks]}>
+          {koko}{" "}
+          <img src="https://img.icons8.com/ios/20/ffffff/long-arrow-right.png" />
+        </span>
+      </span>
+    </div>
   );
 };
 export default Button;

@@ -1,4 +1,4 @@
-import style from "./Account.module.css";
+import style from "./styles/SigningIn.module.css";
 import Button from "../UniversalStuff/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faGoogle } from "@fortawesome/free-brands-svg-icons";
@@ -8,9 +8,11 @@ const SigningIn = (props) => {
     <div className={style["signingIn-container"]}>
       <div className={style["signIn"]}>
         <div className={style["title"]}>Sign in </div>
-        <div>
-          <a href="">Forgotten Your Password?</a>
-        </div>
+
+        <a className={style["hyperlink"]} href="">
+          Forgotten Your Password?
+        </a>
+
         <div className={style["form"]}>
           <input type="text" placeholder="Email *" />
 
@@ -19,15 +21,25 @@ const SigningIn = (props) => {
 
         <div className={style["keep-logged-in"]}>
           <input type="checkbox" placeholder="kkok"></input>
-          <div className={style[""]}>
-            Keep me logged in. <a href=""> More info</a>
+          <div>
+            Keep me logged in.{" "}
+            <a className={style["hyperlink"]} href="">
+              More info
+            </a>
           </div>
         </div>
         <Button koko={"SIGN IN"} />
         <div className={style["privacy-notice"]}>
           I have read and accepted
-          <a href=""> Creators Club Terms & Conditions</a> and the{" "}
-          <a href=""> adidas Privacy Notice</a>
+          <a className={style["hyperlink"]} href="">
+            {" "}
+            Creators Club Terms & Conditions
+          </a>{" "}
+          and the
+          <a className={style["hyperlink"]} href="">
+            {" "}
+            adidas Privacy Notice
+          </a>
         </div>
         <div>OR</div>
         <div className={style["other-login-options"]}>

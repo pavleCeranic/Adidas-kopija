@@ -12,6 +12,7 @@
   display: flex;
   flex-direction: row;
   cursor: pointer;
+  text-decoration: none;
 }
 .first-element * {
   padding: 0 5px;
