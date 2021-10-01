@@ -1,0 +1,32 @@
+.wrapper {
+  display: flex;
+
+  align-items: center;
+  overflow: scroll;
+}
+.container {
+  background-color: antiquewhite;
+  margin: 20px;
+}
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+}
+.content * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  height: 350px;
+  width: 200px;
+  margin: 10px;
+}
+button * {
+  height: 30px;
+  width: 30px;
+}

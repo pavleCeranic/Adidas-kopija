@@ -43,13 +43,13 @@ const SigningIn = (props) => {
         </div>
         <div>OR</div>
         <div className={style["other-login-options"]}>
-          <div className={style["fb-option"]}>
+          <div className={style["option"]}>
             <div>FACEBOOK</div>
             <div className={style["icon-fb"]}>
               <FontAwesomeIcon icon={faFacebook} />
             </div>
           </div>
-          <div className={style["go-option"]}>
+          <div className={style["option"]}>
             <div>GOOGLE</div>
             <div className={style["icon-go"]}>
               <FontAwesomeIcon icon={faGoogle} />
