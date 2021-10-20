@@ -3,7 +3,7 @@ import { MainContent } from "./MainContent";
 import { NavTrack } from "./NavTrack";
 import style from "./styles/SideBar.module.css";
 import { useDispatch } from "react-redux";
-import { closeSidebar } from "../../store/ui-action";
+import { closeSidebar } from "../../Store/ui-action";
 
 export const SideBar = (props) => {
   const dispatch = useDispatch();

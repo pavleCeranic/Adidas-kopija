@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { useDispatch } from "react-redux";
 import style from "./styles/SearchTab.module.css";
-import { closeSearch } from "../../store/ui-action";
+import { closeSearch } from "../../Store/ui-action";
 
 const SearchTab = (props) => {
   const dispatch = useDispatch();

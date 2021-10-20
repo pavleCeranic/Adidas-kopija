@@ -14,7 +14,7 @@ import {
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import { openSidebar, openSearch } from "../../store/ui-action";
+import { openSidebar, openSearch } from "../../Store/ui-action";
 
 export const NavBar = (props) => {
   const dispatch = useDispatch();
