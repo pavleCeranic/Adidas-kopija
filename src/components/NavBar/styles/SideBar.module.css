@@ -10,11 +10,28 @@
   font-size: 18px;
   font-weight: 600;
   letter-spacing: 2px;
-
   flex-grow: 0.5;
   min-width: 315px;
   z-index: 99;
-  animation: sidebarAnimation 0.5s;
+  animation: sidebarOpenAnimation 0.7s;
+}
+.sidebarClose {
+  position: absolute;
+  top: 0;
+  right: 3888px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background-color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  flex-grow: 0.5;
+  min-width: 315px;
+  z-index: 99;
+  animation: sidebarCloseAnimation 0.7s;
 }
 
 .header {
@@ -55,11 +72,21 @@
 .logo {
   flex-grow: 1;
 }
-@keyframes sidebarAnimation {
+@keyframes sidebarOpenAnimation {
   from {
     left: -820px;
   }
   to {
     left: 0px;
+  }
+}
+@keyframes sidebarCloseAnimation {
+  from {
+    right: 0;
+    opacity: 1;
+  }
+  to {
+    right: 850px;
+    opacity: 0;
   }
 }

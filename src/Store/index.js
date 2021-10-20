@@ -1,14 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { toggleShowSlice } from './SidebarSlice';
-import {toggleSearchSlice} from './SearchSlice'
-
-
+import { uiSlice } from './ui-slice';
 
 const store = configureStore({
     reducer: {
-    show: toggleShowSlice.reducer,
-    search: toggleSearchSlice.reducer,
-    
+    cssClass: uiSlice.reducer
 },
   });
 

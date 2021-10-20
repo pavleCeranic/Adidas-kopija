@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import axios from "axios";
 
 import style from "./Test.module.css";
 
@@ -25,8 +26,11 @@ const CarouselComponent = () => {
     const koko = list[i];
     console.log(koko);
   }
-
-  // mappedList.filter((element, [i]) =>  )
+  // useEffect(() => {
+  //   axios
+  //     .get("https://jsonplaceholder.typicode.com/users")
+  //     .then((response) => console.log("object", response.data));
+  // }, []);
 
   const [state, setState] = useState(mappedList);
 

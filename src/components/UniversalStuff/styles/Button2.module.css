@@ -18,6 +18,9 @@
 .button * {
   margin: 0 10px;
 }
+.button-clicked * {
+  margin: 0 10px;
+}
 .button:hover {
   color: rgb(187, 187, 187);
   transition: color ease-in 0.1s;

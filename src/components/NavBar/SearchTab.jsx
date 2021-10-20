@@ -1,37 +1,38 @@
 import React, { Fragment } from "react";
 import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
-import { toggleSearchAction } from "../../Store/SearchSlice";
 import style from "./styles/SearchTab.module.css";
-import { debounce } from "lodash";
+import { closeSearch } from "../../store/ui-action";
 
-const SearchTab = () => {
+const SearchTab = (props) => {
   const dispatch = useDispatch();
 
-  const searchState = useSelector((state) => state.search.show);
-  const tab = searchState ? "search-tab" : "search-tab-opposite-animation";
+  let specialClasses = props.cssClass;
+
+  if (props.cssClass === "closingSearch") {
+    specialClasses = "searchTab";
+  }
+  if (props.cssClass === "openingSearch") {
+    specialClasses = "searchTabClosed";
+  }
+
   const clickSearchHandler = () => {
-    dispatch(toggleSearchAction.toggleSearch());
+    dispatch(closeSearch());
   };
 
   return (
     <Fragment>
-      {searchState ? (
-        <div className={style[tab]}>
-          <div className={style["search-container"]}>
-            <div onClick={clickSearchHandler} className={style["exit"]}>
-              X
-            </div>
-            <input
-              type="text"
-              placeholder="Search"
-              className={style["searchTabInput"]}
-            />
+      <div className={style[specialClasses]}>
+        <div className={style["search-container"]}>
+          <div onClick={clickSearchHandler} className={style["exit"]}>
+            X
           </div>
+          <input
+            type="text"
+            placeholder="Search"
+            className={style["searchTabInput"]}
+          />
         </div>
-      ) : (
-        <div></div>
-      )}
+      </div>
     </Fragment>
   );
 };

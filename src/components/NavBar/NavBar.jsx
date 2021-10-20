@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
 import style from "./styles/NavBarFile.module.css";
-//import { BrowserRouter as Router } from "react-router-dom";
 import { MainContent } from "./MainContent";
 import { NavTrack } from "./NavTrack";
 import { SideBar } from "./SideBar";
-import { toggleShowAction } from "../../Store/SidebarSlice";
-import { toggleSearchAction } from "../../Store/SearchSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SearchTab from "./SearchTab";
@@ -17,24 +14,25 @@ import {
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { openSidebar, openSearch } from "../../store/ui-action";
 
 export const NavBar = (props) => {
   const dispatch = useDispatch();
-  const sidebarState = useSelector((state) => state.show.show);
-  const searchState = useSelector((state) => state.search.show);
+  const sidebarState = useSelector((state) => state.cssClass.sidebarCss);
+  const searchState = useSelector((state) => state.cssClass.searchCss);
   const [item, setItem] = useState("");
+
   const array = [
     "FREE DELIVERY FOR CREATORS club members",
     "60 DAYS* FREE RETURNS & EXCHANGE",
     "COVID-19 FAQS & STORES OPEN",
   ];
-  const clickHandler = () => {
-    dispatch(toggleShowAction.toggleSideabar());
+  const clickSidebarHandler = () => {
+    dispatch(openSidebar());
   };
   const clickSearchHandler = () => {
-    dispatch(toggleSearchAction.toggleSearch());
+    dispatch(openSearch());
   };
-
   useEffect(() => {
     var count = 0;
     setInterval((e) => {
@@ -56,7 +54,7 @@ export const NavBar = (props) => {
         <NavTrack navTrackClass={style["nav-track"]} ida={"track-item"} />
         <div className={style["all-categories"]}>
           <div className={style["left-side-navbar"]}>
-            <div onClick={clickHandler} className={style["hamburger"]}>
+            <div onClick={clickSidebarHandler} className={style["hamburger"]}>
               <span></span>
               <span></span>
               <span></span>
@@ -104,8 +102,8 @@ export const NavBar = (props) => {
           </div>
         </div>
       </div>
-      {sidebarState && <SideBar />}
-      {searchState && <SearchTab />}
+      <SideBar cssClass={sidebarState.cssClass} />
+      <SearchTab cssClass={searchState.cssClass} />
     </>
   );
 };
