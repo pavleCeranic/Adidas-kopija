@@ -2,7 +2,7 @@
   background-color: aliceblue;
   text-transform: uppercase;
   height: 30em;
-  display: none;
+  display: flex;
   flex-direction: row;
   letter-spacing: 2px;
 }

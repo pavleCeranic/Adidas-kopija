@@ -229,3 +229,8 @@
     opacity: 0;
   }
 }
+.categorija {
+  height: 200px;
+  background-color: #000;
+  display: flex;
+}

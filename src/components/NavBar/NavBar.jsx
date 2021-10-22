@@ -15,13 +15,16 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { openSidebar, openSearch } from "../../Store/ui-action";
+import Categories from "./Categories/Categories";
+import { show } from "../../Store/category-action";
 
 export const NavBar = (props) => {
   const dispatch = useDispatch();
   const sidebarState = useSelector((state) => state.cssClass.sidebarCss);
   const searchState = useSelector((state) => state.cssClass.searchCss);
   const [item, setItem] = useState("");
-
+  const [turnedOff, turnON] = useState(true);
+  //const categories = useSelector((state) => state.category.categories);
   const array = [
     "FREE DELIVERY FOR CREATORS club members",
     "60 DAYS* FREE RETURNS & EXCHANGE",
@@ -32,6 +35,9 @@ export const NavBar = (props) => {
   };
   const clickSearchHandler = () => {
     dispatch(openSearch());
+  };
+  const hoverHandler = () => {
+    dispatch(show());
   };
   useEffect(() => {
     var count = 0;
@@ -72,7 +78,11 @@ export const NavBar = (props) => {
             </Link>
           </div>
           {/* <div className={style["logo"]}>dd</div> */}
+
           <MainContent
+            //onClick={() => turnON(true)}
+            onMouseLeave={() => turnON(false)}
+            onClick={hoverHandler}
             mainContentClass={style["main-categories"]}
             itemPlaceholderClass={style["item-placeholder"]}
           />
@@ -104,6 +114,7 @@ export const NavBar = (props) => {
       </div>
       <SideBar cssClass={sidebarState.cssClass} />
       <SearchTab cssClass={searchState.cssClass} />
+      {turnedOff && <Categories />}
     </>
   );
 };

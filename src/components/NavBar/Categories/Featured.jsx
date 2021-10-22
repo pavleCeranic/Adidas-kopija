@@ -3,7 +3,7 @@ import axios from "axios";
 import style from "../styles/Category.module.css";
 
 const Featured = (props) => {
-  const { containerProps, namesProps, koko } = props;
+  const { containerProps, namesProps } = props;
 
   const [post, setPost] = useState(null);
 
@@ -15,9 +15,7 @@ const Featured = (props) => {
         console.log("ima li ovdje ista", response.data);
       });
   }, []);
-  const arrayList = [];
 
-  console.log(arrayList);
   if (!post) return null;
 
   return (
