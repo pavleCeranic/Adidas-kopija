@@ -69,8 +69,13 @@
 .item-placeholder :hover {
   border: none;
 }
+.item-placeholder {
+  padding: 0 8px;
+  margin: 0;
+}
 
 .main-categories {
+  margin: 0;
   margin-left: 350px;
   font-weight: 700;
   order: 3;
@@ -109,6 +114,7 @@
   align-items: center;
   order: 4;
 }
+
 .search-form {
   padding-left: 15px;
   border: none;

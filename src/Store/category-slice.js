@@ -1,14 +1,26 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 
-export const initialState =  { categories: false }
+export const initialState =  {
+  show:false,
+  categories:null
+   }
 
 export const categorySlice = createSlice({
     name: "category",       
     initialState,
     reducers: {
-      showCategory(state, action) {
-        state.categories = action.payload.categories
+      toggle(state){
+        state.show = !state.show
+      },
+      showCategories(state, action) {
+        state.categories = {
+          shoes : action.payload.categories.shoes,
+          clothing : action.payload.categories.clothing,
+          accessories : action.payload.categories.accessories,
+          sports : action.payload.categories.sports
+        }
+       
       },
     },
   });
