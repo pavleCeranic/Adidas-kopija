@@ -23,10 +23,13 @@
 .icons {
   color: #fff;
 }
-.text {
-}
 @media screen and (max-width: 72em) {
   .LogInandCartInFooter-wrapper {
     display: flex;
+  }
+  .icons {
+    color: #fff;
+    display: flex;
+    align-items: center;
   }
 }

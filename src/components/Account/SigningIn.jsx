@@ -1,3 +1,4 @@
+import React from "react";
 import style from "./styles/SigningIn.module.css";
 import Button from "../UniversalStuff/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,7 +10,7 @@ const SigningIn = (props) => {
       <div className={style["signIn"]}>
         <div className={style["title"]}>Sign in </div>
 
-        <a className={style["hyperlink"]} href="">
+        <a className={style["hyperlink"]} href="/">
           Forgotten Your Password?
         </a>
 
@@ -23,7 +24,7 @@ const SigningIn = (props) => {
           <input type="checkbox" placeholder="kkok"></input>
           <div>
             Keep me logged in.{" "}
-            <a className={style["hyperlink"]} href="">
+            <a className={style["hyperlink"]} href="/">
               More info
             </a>
           </div>
@@ -31,12 +32,12 @@ const SigningIn = (props) => {
         <Button koko={"SIGN IN"} />
         <div className={style["privacy-notice"]}>
           I have read and accepted
-          <a className={style["hyperlink"]} href="">
+          <a className={style["hyperlink"]} href="/">
             {" "}
             Creators Club Terms & Conditions
           </a>{" "}
           and the
-          <a className={style["hyperlink"]} href="">
+          <a className={style["hyperlink"]} href="/">
             {" "}
             adidas Privacy Notice
           </a>
@@ -46,13 +47,13 @@ const SigningIn = (props) => {
           <div className={style["option"]}>
             <div>FACEBOOK</div>
             <div className={style["icon-fb"]}>
-              <FontAwesomeIcon icon={faFacebook} />
+              <FontAwesomeIcon icon={faFacebook} size="2x" />
             </div>
           </div>
           <div className={style["option"]}>
             <div>GOOGLE</div>
             <div className={style["icon-go"]}>
-              <FontAwesomeIcon icon={faGoogle} />
+              <FontAwesomeIcon icon={faGoogle} size="2x" />
             </div>
           </div>
         </div>

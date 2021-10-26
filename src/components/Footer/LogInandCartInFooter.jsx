@@ -9,14 +9,14 @@ const LogInandCartInFooter = () => {
     <div className={style["LogInandCartInFooter-wrapper"]}>
       <Link className={style["first-element"]} to="/useraccount">
         <div className={style["icons"]}>
-          <FontAwesomeIcon className={style["icons"]} icon={faUser} />
+          <FontAwesomeIcon icon={faUser} size="2x" />
 
           <div className={style["text"]}>LOG IN</div>
         </div>
       </Link>
       <Link className={style["second-element"]} to="/shoppingcart">
         <div className={style["icons"]}>
-          <FontAwesomeIcon icon={faShoppingBag} />
+          <FontAwesomeIcon icon={faShoppingBag} size="2x" />
           <div className={style["text"]}>YOUR BAG (0)</div>
         </div>
       </Link>

@@ -37,6 +37,7 @@
   text-decoration-color: white;
 }
 .left-side-navbar {
+  display: none;
   align-items: center;
   order: 2;
 }
@@ -55,7 +56,6 @@
   font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  align-items: stretch;
 }
 .all-categories * {
   margin: 0 8px;
@@ -76,7 +76,7 @@
 
 .main-categories {
   margin: 0;
-  margin-left: 350px;
+  margin-right: 200px;
   font-weight: 700;
   order: 3;
 }
@@ -165,25 +165,19 @@
     opacity: 1;
     display: flex;
   }
-  .navmenu {
-    height: 45px;
-  }
 }
 
 @media screen and (max-width: 100em) {
   .main-categories {
     margin-left: 0px;
+    margin-right: 70px;
   }
 }
 
 .lista {
   background-color: aqua;
 }
-@media screen and (max-width: 72em) {
-  .main-categories {
-    flex-direction: column;
-  }
-}
+
 @media screen and (max-width: 72em) {
   .main-categories {
     display: none;
