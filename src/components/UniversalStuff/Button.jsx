@@ -18,7 +18,10 @@ const Button = (props) => {
       <span className={style["outline"]}>
         <span onClick={clickHandler} className={style[buttocks]}>
           {koko}{" "}
-          <img src="https://img.icons8.com/ios/20/ffffff/long-arrow-right.png" />
+          <img
+            alt="kooko"
+            src="https://img.icons8.com/ios/20/ffffff/long-arrow-right.png"
+          />
         </span>
       </span>
     </div>

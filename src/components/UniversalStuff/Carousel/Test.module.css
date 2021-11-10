@@ -1,6 +1,5 @@
 .wrapper {
   display: flex;
-
   align-items: center;
   overflow: scroll;
 }
@@ -15,18 +14,32 @@
 }
 .content {
   display: flex;
+}
+.content {
+  display: flex;
+  align-items: center;
   flex-direction: row;
 }
-.content * {
+button * {
+}
+.loading {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: aliceblue;
+  font-size: 30px;
+  margin: 50px;
+}
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
   height: 350px;
   width: 200px;
   margin: 10px;
+  background-color: burlywood;
 }
-button * {
+.butt {
+  margin: 10px;
   height: 30px;
-  width: 30px;
 }

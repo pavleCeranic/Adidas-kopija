@@ -17,7 +17,10 @@ const Button2 = (props) => {
     <div className={style["button-wrapper"]}>
       <div onClick={clickHandler} className={style[buttocks]}>
         {koko}
-        <img src="https://img.icons8.com/ios/20/000000/long-arrow-right.png" />
+        <img
+          alt="koko"
+          src="https://img.icons8.com/ios/20/000000/long-arrow-right.png"
+        />
       </div>
     </div>
   );

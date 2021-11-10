@@ -100,14 +100,14 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  color: rgb(66, 66, 66);
   opacity: 0.7;
-
   flex-grow: 1;
 }
 .nav-track * {
+  text-decoration: none !important;
   display: flex;
   justify-content: flex-start;
+  color: rgb(66, 66, 66);
   padding: 9px 20px 0;
 }
 .input-and-icons {

@@ -6,9 +6,9 @@ import Button2 from "./components/UniversalStuff/Button2";
 //import { useEffect, useState } from "react";
 
 const Test = (props) => {
+  console.log("object");
   return (
     <div>
-      {/* <Novo /> */}
       <Button2 koko={"LOGIN"} />
       <CarouselComponent />
     </div>
