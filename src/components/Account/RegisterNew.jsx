@@ -3,7 +3,7 @@ import style from "./styles/RegisterNew.module.css";
 
 const RegisterNew = () => {
   return (
-    <div>
+    <div className={style["wrapper"]}>
       <div>dobro nam dosli</div>
     </div>
   );

@@ -1,3 +1,6 @@
+.noSidebarYet {
+  display: none;
+}
 .sidebar {
   position: absolute;
   top: 0;

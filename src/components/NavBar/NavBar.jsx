@@ -42,7 +42,7 @@ export const NavBar = (props) => {
       count = (count + randomNumber) % array.length;
       setItem(array[count]);
     }, 3000);
-  }, []);
+  }, [array]);
 
   return (
     <>

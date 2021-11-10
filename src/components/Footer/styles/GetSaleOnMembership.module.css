@@ -16,5 +16,9 @@
 @media screen and (max-width: 55em) {
   .sale-on-membership-wrapper {
     flex-direction: column;
+    justify-content: flex-start;
+  }
+  .sale-on-membership-text {
+    width: 455px;
   }
 }

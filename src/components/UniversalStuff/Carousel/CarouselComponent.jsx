@@ -1,50 +1,58 @@
-import React, { useEffect, useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+import React, { Fragment, useRef, useEffect, useState } from "react";
 import axios from "axios";
 
 import style from "./Test.module.css";
 
 const CarouselComponent = () => {
-  const list = [
-    "prvi",
-    "drugi",
-    "treci",
-    "cetvrti",
-    "peti",
-    "sesti",
-    "sedmi",
-    "osmi",
-    "deveti",
-    "deseti",
-    "jedanaesti",
-  ];
-  const mappedList = list.map((el) => (
-    <div className={style["content"]}>{el}</div>
-  ));
+  const [state, setState] = useState(true);
+  const [arrayState, setArrayState] = useState([]);
 
-  for (let i = 0; list.length < i; i + 3) {
-    const koko = list[i];
-    console.log(koko);
-  }
-  // useEffect(() => {
-  //   axios
-  //     .get("https://jsonplaceholder.typicode.com/users")
-  //     .then((response) => console.log("object", response.data));
-  // }, []);
+  const firstRender = useRef(false);
 
-  const [state, setState] = useState(mappedList);
+  useEffect(() => {
+    if (firstRender.current) {
+      return;
+    } else {
+      axios
+        .get("https://localhost:5001/api/users/")
+        .then((response) =>
+          setArrayState((arrayState) => (arrayState = response.data))
+        )
+        .then(() => console.log("kokosi", arrayState))
+        .then(() => setState(false))
+        .then(() => (firstRender.current = true));
+    }
+  }, [arrayState]);
 
+  let boko = [];
+
+  arrayState.map((el) =>
+    boko.push(<div className={style["card"]}>{el.name}</div>)
+  );
+
+  const leftHandler = () => {};
+  const rightHandler = () => {};
   return (
-    <div className={style["wrapper"]}>
-      <div className={style["container"]}>
-        <div className={style["title"]}>Title</div>
-        <div className={style["content"]}>
-          <button>LEFT</button>
-          {state}
-          <button>RIGHT</button>
+    <Fragment>
+      {state ? (
+        <div className={style["loading"]}>LOADING ...</div>
+      ) : (
+        <div className={style["wrapper"]}>
+          <div className={style["container"]}>
+            <div className={style["title"]}>Title</div>
+            <div className={style["content"]}>
+              <button onClick={leftHandler} className={style["butt"]}>
+                LEFT
+              </button>
+              {[boko[0], boko[1]]}
+              <button onClick={rightHandler} className={style["butt"]}>
+                RIGHT
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      )}
+    </Fragment>
   );
 };
 export default CarouselComponent;
