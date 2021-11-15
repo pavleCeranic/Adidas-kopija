@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 
-export const initialState =  { sidebarCss:{cssClass:"openingSidebar"},searchCss:{cssClass:"openingSearch"}}
+export const initialState =  { sidebarCss:{cssClass:"default"},searchCss:{cssClass:"default"}}
 
 export const uiSlice = createSlice({
     name: "cssClass",       

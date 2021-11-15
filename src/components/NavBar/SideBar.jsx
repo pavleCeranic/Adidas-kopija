@@ -9,7 +9,9 @@ export const SideBar = (props) => {
   const dispatch = useDispatch();
 
   let specialClasses = props.cssClass;
-
+  if (props.cssClass === "default") {
+    specialClasses = "default";
+  }
   if (props.cssClass === "closingSidebar") {
     specialClasses = "sidebar";
   }

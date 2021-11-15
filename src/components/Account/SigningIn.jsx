@@ -5,6 +5,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faGoogle } from "@fortawesome/free-brands-svg-icons";
 
 const SigningIn = (props) => {
+  const submitHandler = (e) => {
+    console.log("ulogovao sam se");
+  };
+
   return (
     <div className={style["signingIn-container"]}>
       <div className={style["signIn"]}>
@@ -13,23 +17,24 @@ const SigningIn = (props) => {
         <a className={style["hyperlink"]} href="">
           Forgotten Your Password?
         </a>
+        <form>
+          <div className={style["form"]}>
+            <input type="text" placeholder="Email *" />
 
-        <div className={style["form"]}>
-          <input type="text" placeholder="Email *" />
-
-          <input type="text" placeholder="Password *" />
-        </div>
-
-        <div className={style["keep-logged-in"]}>
-          <input type="checkbox" placeholder="kkok"></input>
-          <div>
-            Keep me logged in.{" "}
-            <a className={style["hyperlink"]} href="">
-              More info
-            </a>
+            <input type="text" placeholder="Password *" />
           </div>
-        </div>
-        <Button koko={"SIGN IN"} />
+
+          <div className={style["keep-logged-in"]}>
+            <input type="checkbox" placeholder="kkok"></input>
+            <div>
+              Keep me logged in.{" "}
+              <a className={style["hyperlink"]} href="">
+                More info
+              </a>
+            </div>
+          </div>
+          <Button onClick={submitHandler} koko={"SIGN IN"} />
+        </form>
         <div className={style["privacy-notice"]}>
           I have read and accepted
           <a className={style["hyperlink"]} href="">

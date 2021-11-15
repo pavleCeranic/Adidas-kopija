@@ -7,7 +7,9 @@ const SearchTab = (props) => {
   const dispatch = useDispatch();
 
   let specialClasses = props.cssClass;
-
+  if (props.cssClass === "default") {
+    specialClasses = "default";
+  }
   if (props.cssClass === "closingSearch") {
     specialClasses = "searchTab";
   }
