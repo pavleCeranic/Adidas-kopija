@@ -19,7 +19,7 @@ const BottomPart = () => {
       {line}
       <Link>Privacy Notice</Link>
       {line}
-      <Fragment className={style["language"]}>
+      <Fragment>
         <Link>Language</Link>
         {line}
       </Fragment>

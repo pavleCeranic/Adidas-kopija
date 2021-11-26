@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
 import style from "../styles/Home.module.css";
-
 import AdidasStories from "../components/UniversalStuff/AdidasStories";
 import PopularRN from "../components/UniversalStuff/PopularRN";
 

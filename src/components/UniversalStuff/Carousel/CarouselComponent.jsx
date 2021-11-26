@@ -26,15 +26,13 @@ const CarouselComponent = () => {
     console.log(koko);
   }
 
-  const [state, setState] = useState(mappedList);
-
   return (
     <div className={style["wrapper"]}>
       <div className={style["container"]}>
         <div className={style["title"]}>Title</div>
         <div className={style["content"]}>
           <button>LEFT</button>
-          {state}
+          {mappedList}
           <button>RIGHT</button>
         </div>
       </div>

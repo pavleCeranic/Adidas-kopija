@@ -1,12 +1,13 @@
 .wrapper {
   display: flex;
-
+  width: 500px;
   align-items: center;
-  overflow: scroll;
+  overflow-x: -moz-hidden-unscrollable;
+  overflow-y: hidden;
+  margin: 15px;
 }
 .container {
   background-color: antiquewhite;
-  margin: 20px;
 }
 .title {
   font-size: 20px;

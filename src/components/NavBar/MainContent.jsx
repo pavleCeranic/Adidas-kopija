@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
 import {
   showBRANDS,
@@ -68,10 +68,8 @@ export const MainContent = (props) => {
       </div>
       <div
         className={itemPlaceholderClass}
-        //onMouseEnter={showSportsHandler}
         onMouseOut={showBrandsHandler}
         onMouseOver={showSportsHandler}
-        //onMouseLeave={showSportsHandler}
       >
         <div href="#" className={style["category"]}>
           sports

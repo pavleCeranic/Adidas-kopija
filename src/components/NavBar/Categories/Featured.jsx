@@ -7,15 +7,6 @@ const Featured = (props) => {
 
   const [post, setPost] = useState(null);
 
-  useEffect(() => {
-    axios
-      .get("https://adidas-a9f81-default-rtdb.firebaseio.com/.json")
-      .then((response) => {
-        setPost(response.data);
-        console.log("ima li ovdje ista", response.data);
-      });
-  }, []);
-
   if (!post) return null;
 
   return (

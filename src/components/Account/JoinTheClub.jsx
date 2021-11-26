@@ -1,8 +1,12 @@
 import Button from "../UniversalStuff/Button";
 import React from "react";
 import style from "./styles/JoinTheClub.module.css";
+import { Link, Redirect } from "react-router-dom";
 
 const JoinTheClub = () => {
+  const redirectHandler = () => {
+    return <Redirect to="/register" />;
+  };
   return (
     <div className={style["JoinTheClub-wrapper"]}>
       <div className={style["title"]}>Join the club. get rewarded</div>
@@ -21,7 +25,11 @@ const JoinTheClub = () => {
           </li>
         </ul>
       </div>
-      <Button koko={"REGSTER"} />
+      <Link to="/register">
+        <button>
+          <Button koko={"REGSTER"} />
+        </button>
+      </Link>
     </div>
   );
 };

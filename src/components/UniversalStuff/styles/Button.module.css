@@ -1,23 +1,24 @@
 .button-wrapper {
-  display: flex;
-  margin: 20px 0;
+  padding: 0%;
+  margin: 0;
+  background-color: transparent;
 }
 .outline {
-  padding: 8px 5px 10px -5px;
   border: #000 solid 1px;
 }
 .outline * {
-  padding: 0 15px;
 }
 .butt {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: -3px 3px 3px -3px;
-  padding: 10px 20px;
+  margin: -4px 0px 2px -4px;
+  padding: 7px 15px;
   font-size: 15px;
   color: #fff;
-  background-color: #000;
+
+  width: 100%;
+  height: 100%;
   transition: margin ease-in 0.1s;
   transition: color ease-in 0.2s;
   cursor: pointer;
@@ -26,13 +27,22 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 10px 20px;
+  margin: 0;
+  padding: 7px 15px;
   font-size: 15px;
   color: #fff;
   background-color: #000;
+  width: 100%;
+  height: 100%;
   transition: margin ease-in 0.1s;
   transition: color ease-in 0.2s;
   cursor: pointer;
+}
+.butt * {
+  padding: 5px;
+}
+.Butt * {
+  padding: 5px;
 }
 .butt:hover {
   color: rgb(155, 155, 155);
@@ -43,6 +53,7 @@
   color: rgb(155, 155, 155);
   transition: color ease-in 0.2s;
 }
+
 @media screen and (max-width: 55em) {
   .outline {
     width: 100%;

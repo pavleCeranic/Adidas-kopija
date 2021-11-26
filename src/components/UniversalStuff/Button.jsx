@@ -15,12 +15,11 @@ const Button = (props) => {
 
   return (
     <div className={style["button-wrapper"]}>
-      <span className={style["outline"]}>
-        <span onClick={clickHandler} className={style[buttocks]}>
-          {koko}{" "}
-          <img src="https://img.icons8.com/ios/20/ffffff/long-arrow-right.png" />
-        </span>
-      </span>
+      <div onClick={clickHandler} className={style[buttocks]}>
+        {koko}
+        {"  "}
+        <img src="https://img.icons8.com/ios/40/ffffff/long-arrow-right.png" />
+      </div>
     </div>
   );
 };

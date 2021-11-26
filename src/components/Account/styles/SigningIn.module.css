@@ -32,7 +32,7 @@
   font-size: 15px;
   height: 45px;
   padding: 0 20px;
-  margin: 25px 0;
+  margin: 20px 0;
   outline: none;
   border: solid 1.5px rgb(141, 141, 141);
   transition: bottom ease-in 0.5s;
@@ -80,6 +80,15 @@
   margin: 5px 0;
   transition: color ease-in 0.2s;
 }
+#1 {
+  border-bottom-color: rgb(247, 0, 0);
+  border-bottom-width: 4px;
+}
+h6 {
+  letter-spacing: 0;
+  color: red;
+  padding-top: 15px;
+}
 .option * {
   padding: 5px;
 }
@@ -95,7 +104,12 @@
   display: flex;
   justify-content: flex-end;
 }
-
+button {
+  width: 9vw;
+  height: 5vh;
+  border: none;
+  background-color: #000;
+}
 @media screen and (max-width: 72em) {
   .title {
     font-size: 32px;

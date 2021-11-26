@@ -8,72 +8,72 @@ const FooterCategories = () => {
       <div id={style["8"]} className={style["categories"]}>
         <div className={style["title"]}>PRODUCTS</div>
         <div className={style["list-item"]}>
-          <Link>Shoes</Link>
-          <Link>Clothing</Link>
-          <Link>Accessories</Link>
-          <Link>New Arrivals</Link>
-          <Link>Release Date</Link>
-          <Link>Top Sellers</Link>
-          <Link>Outlet</Link>
+          <Link to="">Shoes</Link>
+          <Link to="">Clothing</Link>
+          <Link to="">Accessories</Link>
+          <Link to="">New Arrivals</Link>
+          <Link to="">Release Date</Link>
+          <Link to="">Top Sellers</Link>
+          <Link to="">Outlet</Link>
         </div>
       </div>
       <div className={style["categories"]}>
         <div className={style["title"]}>SPORTS</div>
         <div className={style["list-item"]}>
-          <Link>Football</Link>
-          <Link>Basketball</Link>
-          <Link>Golf</Link>
-          <Link>Gym & Training</Link>
-          <Link>Outdoor</Link>
-          <Link>Rugby</Link>
-          <Link>Running</Link>
-          <Link>Tennis</Link>
+          <Link to="">Football</Link>
+          <Link to="">Basketball</Link>
+          <Link to="">Golf</Link>
+          <Link to="">Gym & Training</Link>
+          <Link to="">Outdoor</Link>
+          <Link to="">Rugby</Link>
+          <Link to="">Running</Link>
+          <Link to="">Tennis</Link>
         </div>
       </div>
       <div className={style["categories"]}>
         <div className={style["title"]}>COLLECTIONS</div>
         <div className={style["list-item"]}>
-          <Link>Originals</Link>
-          <Link>IVY PARK</Link>
-          <Link>Ultraboost</Link>
-          <Link>NMD</Link>
-          <Link>Gazelle</Link>
-          <Link>Superstar</Link>
-          <Link>Stan Smith</Link>
-          <Link>Ozweego</Link>
+          <Link to="">Originals</Link>
+          <Link to="">IVY PARK</Link>
+          <Link to="">Ultraboost</Link>
+          <Link to="">NMD</Link>
+          <Link to="">Gazelle</Link>
+          <Link to="">Superstar</Link>
+          <Link to="">Stan Smith</Link>
+          <Link to="">Ozweego</Link>
         </div>
       </div>
       <div className={style["categories"]}>
         <div className={style["title"]}>SUPPORT</div>
         <div className={style["list-item"]}>
-          <Link>Delivery</Link>
-          <Link>Returns & Refunds</Link>
-          <Link>Help & Customer Service</Link>
-          <Link>Size Charts</Link>
-          <Link>Store Finder</Link>
-          <Link>Student discount</Link>
-          <Link>Gift Cards</Link>
-          <Link>European Disputes</Link>
-          <Link>Resolution</Link>
-          <Link>Imprint</Link>
+          <Link to="">Delivery</Link>
+          <Link to="">Returns & Refunds</Link>
+          <Link to="">Help & Customer Service</Link>
+          <Link to="">Size Charts</Link>
+          <Link to="">Store Finder</Link>
+          <Link to="">Student discount</Link>
+          <Link to="">Gift Cards</Link>
+          <Link to="">European Disputes</Link>
+          <Link to="">Resolution</Link>
+          <Link to="">Imprint</Link>
         </div>
       </div>
       <div id={style["8"]} className={style["categories"]}>
         <div className={style["title"]}>COMPANY INFO</div>
         <div className={style["list-item"]}>
-          <Link>About Us</Link>
-          <Link>Careers</Link>
-          <Link>Press</Link>
-          <Link>Creators Club</Link>
-          <Link>Mobile Apps</Link>
-          <Link>adidas Confirmed</Link>
-          <Link>adidas Stories</Link>
+          <Link to="">About Us</Link>
+          <Link to="">Careers</Link>
+          <Link to="">Press</Link>
+          <Link to="">Creators Club</Link>
+          <Link to="">Mobile Apps</Link>
+          <Link to="">adidas Confirmed</Link>
+          <Link to="">adidas Stories</Link>
         </div>
       </div>
       <div className={style["categories"]}>
         <div className={style["title"]}>MORE ADIDAS</div>
         <div className={style["list-item"]}>
-          <Link>Training Equipment</Link>
+          <Link to="">Training Equipment</Link>
         </div>
       </div>
     </div>
