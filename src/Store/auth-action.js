@@ -13,10 +13,11 @@ export const LogIn = (Email,Password)=>{
         Password,
      }),
    }) 
-   const Data = await response;  
-    console.log("ovo je response poslije requesta",Data);
+   const Data = await response.json();  
+    return Data;
   }
   const content = await loginRequest()
+  console.log("ovo je response poslije requesta",content);
   if(!response.ok){
     dispatch(authActions.User({
       ValidUser: false,

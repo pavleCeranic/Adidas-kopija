@@ -19,7 +19,7 @@ const App = () => {
     const dispatch = useDispatch();
   
   useEffect(() => {
-    auth && dispatch(GetUser());
+    dispatch(GetUser());
     
   }, [auth, dispatch]);
     return (
