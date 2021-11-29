@@ -4,7 +4,7 @@ export const LogIn = (Email,Password)=>{
     return async(dispatch)=>{
       let response=null;
     const loginRequest = async ()=>{
-       response = await fetch("https://localhost:8000/api/login", {
+       response = await fetch("http://localhost:8000/api/login", {
       method:"POST",
       headers: { "content-type": "application/json" },
       credentials: "include",
@@ -36,7 +36,7 @@ export const LogIn = (Email,Password)=>{
 export const GetUser = ()=>{
   return async(dispatch)=>{
        const fetchUser =  async () => {
-        const response = await fetch("https://localhost:8000/api/user", {
+        const response = await fetch("http://localhost:8000/api/user", {
           headers: { "content-type": "application/json" },
           credentials: "include",
         });
@@ -67,7 +67,7 @@ console.log("not Logged in",error);
 export const LogOut = ()=>{
   return async(dispatch)=>{
        const requestLogout =  async () => {
-        const response = await fetch("https://localhost:8000/api/logout", {
+        const response = await fetch("http://localhost:8000/api/logout", {
           method:"POST",
           headers: { "content-type": "application/json" },
           credentials: "include",
@@ -91,7 +91,7 @@ export const LogOut = ()=>{
 export const RegisterUser = (username,email,password)=>{
   return async(dispatch)=>{
     const requestRegister =  async () => {
-         const response = await fetch("https://localhost:8000/api/register", {
+         const response = await fetch("http://localhost:8000/api/register", {
           method:"POST",
           headers: { "content-type": "application/json" },
           credentials: "include",
